@@ -1,4 +1,4 @@
-/* $XFree86: xc/programs/Xserver/hw/xfree86/input/palmax/xf86Palmax.c,v 1.2 2003/06/23 17:35:49 eich Exp $ */
+/* $XFree86$ */
 
 #include "misc.h"
 #include "xf86.h"
