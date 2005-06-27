@@ -776,9 +776,6 @@ init_err:
 	return NULL;
 }
 
-#ifdef XFree86LOADER
-static
-#endif
 _X_EXPORT InputDriverRec PALMAX = {
 	1,			/* driver version */
 	"palmax",		/* driver name */
