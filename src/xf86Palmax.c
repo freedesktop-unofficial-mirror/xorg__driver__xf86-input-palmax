@@ -1,5 +1,9 @@
 /* $XFree86$ */
 
+#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
 #include "misc.h"
 #include "xf86.h"
 #include "xf86_OSproc.h"
