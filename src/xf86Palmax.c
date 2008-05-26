@@ -68,7 +68,9 @@ static const char *reqSymbols[] = {
 	"xf86CollectInputOptions",
 	"xf86ErrorFVerb",
 	"xf86FindOptionValue",
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
 	"xf86GetMotionEvents",
+#endif
 	"xf86GetVerbosity",
 	"xf86MotionHistoryAllocate",
 	"xf86NameCmp",
@@ -467,7 +469,10 @@ xf86PmxControl(DeviceIntPtr	dev,
 		 * screen to fit one meter.
 		 */
 	
-		if (InitValuatorClassDeviceStruct(dev, 2, xf86GetMotionEvents,
+		if (InitValuatorClassDeviceStruct(dev, 2,
+#if GET_ABI_MAJOR(ABI_XINPUT_VERSION) < 3
+				xf86GetMotionEvents,
+#endif
 				local->history_size, Absolute) == FALSE) {
 			ErrorF("Unable to allocate ValuatorClassDeviceStruct\n");
 			return !Success;
